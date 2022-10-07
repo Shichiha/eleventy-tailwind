@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US" class="font-figtree scroll-smooth selection:bg-yellow-300 selection:text-black">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is an 11ty page with Tailwind CSS and a little bit of JavaScript!" />
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/assets/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300&display=swap" rel="stylesheet" />
+  </head>
+  <body class="m-o antialiased scrollbar-thin scrollbar-thumb-zinc-400 scrollbar-track-zinc-300 dark:scrollbar-thumb-[#454b5f] dark:scrollbar-track-[#1d1f2a] dark:bg-[#101218] dark:text-white m-0 min-h-screen flex flex-col text-xl overflow-auto">
+    <header class="pt-6 pb-4 md:pb-12 sticky !backdrop-blur-sm !bg-opacity-90 top-0 bg-white dark:bg-[#101218]">
+      <nav>
+        <span class="absolute pl-5 text-xl left-40 pt-1 block text-black dark:text-white">
+          <a class="px-2 hover:text-blue-600 hover:dark:text-blue-400 transition" href="/about">About</a>
+          <a class="px-2 hover:text-blue-600 hover:dark:text-blue-400 transition" href="/books">Books</a>
+          <a class="px-2 hover:text-blue-600 hover:dark:text-blue-400 transition" href="/blog">Blog</a>
+        </span>
+      </nav>
+    </header>
+    <main class="m-auto p-6 max-w-4xl md:p-10 md:px-20">
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
